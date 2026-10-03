@@ -1,0 +1,351 @@
+{
+  "authoring_receipt_sha256": "2cc455ddb7c10399787c6b9eb783ddf31fc951738f6d7a187fd9f6708157115d",
+  "commands": {
+    "native_authoring_final_guard": {
+      "argv": [
+        "flatpak-spawn",
+        "--host",
+        "/usr/bin/python3",
+        "build-support/renderer/qgis_probe.py",
+        "--config",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd08-qgis-runtime/runtime-001-config.json",
+        "--output",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-runtime/pyqgis-014",
+        "--script",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-worktree/fixtures/render_fixture.py",
+        "--plugin-root",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-worktree"
+      ],
+      "cwd": "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-platform-worktree"
+    },
+    "native_authoring_for_maps": {
+      "argv": [
+        "flatpak-spawn",
+        "--host",
+        "/usr/bin/python3",
+        "build-support/renderer/qgis_probe.py",
+        "--config",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd08-qgis-runtime/runtime-001-config.json",
+        "--output",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-runtime/pyqgis-013",
+        "--script",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-worktree/fixtures/render_fixture.py",
+        "--plugin-root",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-worktree"
+      ],
+      "cwd": "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-platform-worktree"
+    },
+    "native_maps": {
+      "argv": [
+        "flatpak-spawn",
+        "--host",
+        "/usr/bin/python3",
+        "build-support/geonode/run.py",
+        "--python",
+        "/home/revelberry/Projects/AmbisGIS/build-worktrees/geonode-role-propagation/run-003/venv/bin/python",
+        "--output",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-runtime/maps-005",
+        "--integration",
+        "--strict-verifier",
+        "--strict-roles",
+        "--catalog-policy",
+        "--renderer-fixture",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-runtime/pyqgis-013/fixtures",
+        "--qgis-config",
+        "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd08-qgis-runtime/runtime-001-config.json",
+        "--build",
+        "/home/revelberry/Projects/AmbisGIS/build-worktrees/fnd08-java/run-002",
+        "--war-sha256",
+        "9b56b1f65fe267162d9e5035f60f7e6a5e2204bbbc95ce2c77ae62c2b3ac8552",
+        "--java-profile",
+        "/home/revelberry/Projects/AmbisGIS/build-worktrees/fnd08-java/run-002/runtime-profile.json",
+        "--source-successor-build"
+      ],
+      "cwd": "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-platform-worktree"
+    }
+  },
+  "execution_receipt_sha256": "3e7e0f04062d55c74ca2b849f446749648205002d89bc80443f578edcfb37e11",
+  "final_authoring_receipt_sha256": "947cdce0a3256494bd3586ee32f2bd76858c6a548ea6ffb5ea481704309c1c25",
+  "final_execution_receipt_sha256": "6bb19df0d245abc46e8c0a8898f72dc0d8be7dca48d3a9612ea5a880356ca617",
+  "final_guard_rerun": {
+    "attempt": "pyqgis-014",
+    "binding": "maps-005 executed the original pyqgis-013 fixture/source. Final guard-only change was rerun in actual PyQGIS014; server/harness source remains exactly that executed by maps-005.",
+    "http_rerun": false,
+    "native_analyzer_negatives": {
+      "authored_attachment_rejected": true,
+      "external_svg_rejected": true,
+      "macro_rejected": true,
+      "memory_provider_rejected": true,
+      "nan_property_rejected": true,
+      "negative_infinity_property_rejected": true,
+      "outside_source_root_rejected": true,
+      "positive_infinity_property_rejected": true,
+      "subset_not_silently_discarded": true,
+      "symbol_expression_rejected": true,
+      "unapproved_expression_rejected": true,
+      "unavailable_font_rejected": true,
+      "unsupported_crs_rejected": true
+    },
+    "reason": "Independent review found invalid nonfinite property values were accepted; reject NaN/Infinity constants and overflowing property floats.",
+    "representative_positive_image_sha256_equal_to_maps_fixture": {
+      "elevation": "eba258bae24323927a7dd6cfaa6a21626a4a19313da9389251cfd8d4b66a5970",
+      "group_points": "cbfa0f2c3e6754e29b5c47f58158d71638849ecf750a43c914ce5867c7d9a2e3",
+      "parcels": "18e74a3c99e58848ba6ddf32f31710ae4216feeae7dfb1d0ec0ad83b0c7b0707",
+      "private_points": "50fc1694a5c681e75181eaeacd75d89117fbd48043f5025b8ecfc68b81e08717",
+      "public_points": "a39e378cf9c886333337c8f31c3898e235432680d9c3ccb0bc700baf4f82be98",
+      "rich_points": "a2ceb6f6db2e7a8d0a4de96bd4f001c33a007086a401487293559f5470d21f57"
+    },
+    "representative_source_data_sha256_equal_to_maps_fixture": {
+      "elevation": "cd8b73ec7035be3c41deea9011e848d8c5099dc219356744beb6a13300cede4d",
+      "group_points": "1588b81157f27da7011caa9ae0e362f7c9c054caf13c89d87ac36323bfb4fc6d",
+      "parcels": "45c25a9418ef8b87e9e0ad17589cb7dc9a91a68fb8c9c906e75977f7c13c608f",
+      "private_points": "912d074028696bfb2f4c3c6d37747a8d51b064fc85448cc4d4570a6173ccc2ee",
+      "public_points": "912d074028696bfb2f4c3c6d37747a8d51b064fc85448cc4d4570a6173ccc2ee",
+      "rich_points": "912d074028696bfb2f4c3c6d37747a8d51b064fc85448cc4d4570a6173ccc2ee"
+    },
+    "result_exit_code": 0
+  },
+  "http": {
+    "all_passed": true,
+    "allowed": 49,
+    "concurrent_requests": 24,
+    "denied": 103,
+    "positive_policy_cache": false,
+    "requests": 152
+  },
+  "layers": {
+    "elevation": {
+      "height": 16,
+      "render": {
+        "height": 512,
+        "sha256": "eba258bae24323927a7dd6cfaa6a21626a4a19313da9389251cfd8d4b66a5970",
+        "width": 512
+      },
+      "width": 16
+    },
+    "group_points": {
+      "features": 1,
+      "geometry_type": 1,
+      "render": {
+        "height": 512,
+        "sha256": "cbfa0f2c3e6754e29b5c47f58158d71638849ecf750a43c914ce5867c7d9a2e3",
+        "width": 512
+      },
+      "shapefile_attributes_coordinates_equal": true,
+      "shapefile_polygon_ring_order_changes": 0,
+      "shapefile_single_part_promotions": 1,
+      "sld": {
+        "diagnostic": "Created default style file as /home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-runtime/pyqgis-013/fixtures/group_points.sld",
+        "supported": true
+      }
+    },
+    "parcels": {
+      "features": 1,
+      "geometry_type": 2,
+      "render": {
+        "height": 512,
+        "sha256": "18e74a3c99e58848ba6ddf32f31710ae4216feeae7dfb1d0ec0ad83b0c7b0707",
+        "width": 512
+      },
+      "shapefile_attributes_coordinates_equal": true,
+      "shapefile_polygon_ring_order_changes": 1,
+      "shapefile_single_part_promotions": 1,
+      "sld": {
+        "diagnostic": "Created default style file as /home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-runtime/pyqgis-013/fixtures/parcels.sld",
+        "supported": true
+      }
+    },
+    "private_points": {
+      "features": 3,
+      "geometry_type": 0,
+      "render": {
+        "height": 512,
+        "sha256": "50fc1694a5c681e75181eaeacd75d89117fbd48043f5025b8ecfc68b81e08717",
+        "width": 512
+      },
+      "shapefile_attributes_coordinates_equal": true,
+      "shapefile_polygon_ring_order_changes": 0,
+      "shapefile_single_part_promotions": 0,
+      "sld": {
+        "diagnostic": "Created default style file as /home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-runtime/pyqgis-013/fixtures/private_points.sld",
+        "supported": true
+      }
+    },
+    "public_points": {
+      "features": 3,
+      "geometry_type": 0,
+      "render": {
+        "height": 512,
+        "sha256": "a39e378cf9c886333337c8f31c3898e235432680d9c3ccb0bc700baf4f82be98",
+        "width": 512
+      },
+      "shapefile_attributes_coordinates_equal": true,
+      "shapefile_polygon_ring_order_changes": 0,
+      "shapefile_single_part_promotions": 0,
+      "sld": {
+        "diagnostic": "Created default style file as /home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd05-runtime/pyqgis-013/fixtures/public_points.sld",
+        "supported": true
+      }
+    },
+    "rich_points": {
+      "features": 3,
+      "geometry_type": 0,
+      "render": {
+        "height": 512,
+        "sha256": "a2ceb6f6db2e7a8d0a4de96bd4f001c33a007086a401487293559f5470d21f57",
+        "width": 512
+      },
+      "shapefile_attributes_coordinates_equal": true,
+      "shapefile_polygon_ring_order_changes": 0,
+      "shapefile_single_part_promotions": 0,
+      "sld": {
+        "diagnostic": "Cannot export label expression upper(label) to SLD",
+        "supported": false
+      }
+    }
+  },
+  "limits": [
+    "WMS profile is exact single layer GetMap only; other outputs/admin/write paths deny.",
+    "No positive policy cache; tested new requests after committed revocation, not cancellation of an in-flight render.",
+    "Trusted fresh synthetic copies; local integrity checks are not a hostile-writer filesystem race guarantee.",
+    "PostgreSQL alone retains existing documented network-supervisor exception.",
+    "Primary-source G3W/Lizmap comparison is not competitor runtime testing.",
+    "No Windows, physical-display publishing UX, durable saga, general provider/style or released product claim."
+  ],
+  "map_fixture_plugin_source_sha256": {
+    "ambisgis_publishing/__init__.py": "d29470442de5734809fa29cbb5180a5503b15dffe8fa0676d323ccd5ebb13df7",
+    "ambisgis_publishing/analyzer.py": "b839d9b461a6158d1902e635f362c23100192fbe7f461771dcb3e891dfd57d6e",
+    "ambisgis_publishing/bundle.py": "4c078da8ad57bafa78acbdc32c22d0f2e9c5f16ceb3b72b9212689f95e0c22e9",
+    "fixtures/render_fixture.py": "12188f6327233d2ebf63a8277f6260b32d3279a6f9a6bb5cf3bb825aa1ee6451",
+    "tests/test_bundle.py": "db8c1a6b53863a041726e6cd24ff8f829fb50ecd401f7b5988e2ae8a4f20c98f"
+  },
+  "negative_analyzer": {
+    "authored_attachment_rejected": true,
+    "external_svg_rejected": true,
+    "macro_rejected": true,
+    "memory_provider_rejected": true,
+    "nan_property_rejected": true,
+    "negative_infinity_property_rejected": true,
+    "outside_source_root_rejected": true,
+    "positive_infinity_property_rejected": true,
+    "subset_not_silently_discarded": true,
+    "symbol_expression_rejected": true,
+    "unapproved_expression_rejected": true,
+    "unavailable_font_rejected": true,
+    "unsupported_crs_rejected": true
+  },
+  "package_roundtrip": {
+    "elevation": {
+      "render_identical": true,
+      "semantic_data_equal": true
+    },
+    "group_points": {
+      "render_identical": true,
+      "semantic_data_equal": true
+    },
+    "parcels": {
+      "render_identical": true,
+      "semantic_data_equal": true
+    },
+    "private_points": {
+      "render_identical": true,
+      "semantic_data_equal": true
+    },
+    "public_points": {
+      "render_identical": true,
+      "semantic_data_equal": true
+    },
+    "rich_points": {
+      "render_identical": true,
+      "semantic_data_equal": true
+    }
+  },
+  "platform_runtime_report_sha256": "deaf6ec16ad58db95199a64e62a671880c71713a030c3f782aa0f4ecc7f8a3aa",
+  "platform_source_sha256": {
+    "build-support/geonode/render_image_checks.py": "19af8ef109adb2cb6e03fa11fd6300a04e20b8b8f00612bba1e78f4a19240679",
+    "build-support/geonode/renderer_fixture.py": "fe4354671fad3b9e691d12a51815156fa875099750c98b6082b10474915de08e",
+    "build-support/geonode/renderer_gateway.py": "9418dd31e60ffc72c976fcd97f2dad12ff67c4153091ddb7f0be2de19baa4d4b",
+    "build-support/geonode/renderer_journey.py": "e3dde7ce6ed5047b4806ff4bef8baa1dd74a4b35feb085159f2feb03d160b679",
+    "build-support/geonode/run.py": "65371407f38dd9436c6705dcf42d5324cde668ca6262bac700ab3344d8cde795",
+    "build-support/geonode/test_renderer_boundary.py": "c963496a506a6af13f96e2b98fdf5f2a36f96a8d6929fbc579d7a9b2b7e40f1a",
+    "build-support/java/runtime-fixtures/ConfiguredGeoServerRuntime.java": "0215f17346b542b32d5ae1c93c627589087990d6b48817c2a404c3cda9ad174a",
+    "build-support/java/runtime_inputs.py": "6dde746c073c3579ab6a13e838019c308c7868e9ab50d125c3f63a4f825d07d9",
+    "build-support/java/successor_runtime_inputs.py": "1d0017e385b9e3a4d13f7e43bd8206079a094efa9a21d47421d22888b33d0761",
+    "build-support/java/test_successor_runtime_inputs.py": "cba31190f02c430dae7cedbfcd19d39c8673cae68a73c487063dcf94c1b59cdb",
+    "build-support/qgis/renderer_artifacts.py": "fa02066d36459f5a2b8fe89e9dabc28061710d2a8dd5c9978449436cc9e6ad6d",
+    "build-support/qgis/test_renderer_artifacts.py": "5dc70f6d35a0cbf27bc1bfcfd0e794ddeaa63bde64f51f0802652f9426c8a46f",
+    "build-support/renderer/qgis_probe.py": "f7120b9d1484319d283ef5a7d234b3a799f4853bb14a0d9d1faf97d8afd2005c",
+    "services/control-plane/ambisgis_render/__init__.py": "7aa4b980cf37dcc21875dd8ea85b8fe48b7e7cbda7b9790f502d71842c663a52",
+    "services/control-plane/ambisgis_render/boundary.py": "99c9e72b962b53b3fce9f049757b6c56e5ed4494bf54d8784c084370de4e69ae",
+    "services/control-plane/ambisgis_render/qgis_server.py": "187ceaa85fca7fd45ea53b9e6f61eab8f77787d7e2d03f8fed1216267b06ceb4",
+    "services/gateway/CatalogMapPolicyFilter.java": "e88dec207fbe234bc56fd47255f3469a9f967a18fff642f1c8576e18c4d9944e"
+  },
+  "plugin_source_sha256": {
+    "ambisgis_publishing/__init__.py": "d29470442de5734809fa29cbb5180a5503b15dffe8fa0676d323ccd5ebb13df7",
+    "ambisgis_publishing/analyzer.py": "838136aefd7b2f077e9b17f9b9b464cd29f06ff82fa27cb98224eb4d65428947",
+    "ambisgis_publishing/bundle.py": "4c078da8ad57bafa78acbdc32c22d0f2e9c5f16ceb3b72b9212689f95e0c22e9",
+    "fixtures/render_fixture.py": "0157c9c6aa1880ef04c16b3813d0b7289df9fd57f34fb8ef0da3713059cebdde",
+    "tests/test_bundle.py": "98c6c4e8340d71c29cfa04f96d566e7b9826cf131cede27cedfe17c2761d60c5"
+  },
+  "qgis_stage": {
+    "files_verified": 8110,
+    "manifest_sha256": "8711c8dafa12fceb3ace2c8d9c148e43c1dcd845f49c5c85bb7c72f9f80703f7",
+    "native_server_path": "/home/revelberry/Projects/AmbisGIS_Codex_Plan/fnd08-qgis-runtime/stage-001/prefix/lib/libqgis_server.so.3.44.14",
+    "native_server_sha256": "2fd1acd5a66c61bddf0e299484bce9674dba6b31b1760ab0ad0c29b9047c468f",
+    "source_commit": "86af40542b219b0da6df1a43914413443330c0c0",
+    "source_tree": "84ea1b18fdf5721819fee34fe06cdef7ea82afdc"
+  },
+  "rendering": {
+    "blank_image_negative_control": true,
+    "max_mean_absolute_error": 0.6778424580891927,
+    "mean_absolute_error_limit": 3.0,
+    "native_analyzer_negatives": {
+      "authored_attachment_rejected": true,
+      "external_svg_rejected": true,
+      "macro_rejected": true,
+      "memory_provider_rejected": true,
+      "nan_property_rejected": true,
+      "negative_infinity_property_rejected": true,
+      "outside_source_root_rejected": true,
+      "positive_infinity_property_rejected": true,
+      "subset_not_silently_discarded": true,
+      "symbol_expression_rejected": true,
+      "unapproved_expression_rejected": true,
+      "unavailable_font_rejected": true,
+      "unsupported_crs_rejected": true
+    },
+    "package_roundtrip": {
+      "elevation": {
+        "render_identical": true,
+        "semantic_data_equal": true
+      },
+      "group_points": {
+        "render_identical": true,
+        "semantic_data_equal": true
+      },
+      "parcels": {
+        "render_identical": true,
+        "semantic_data_equal": true
+      },
+      "private_points": {
+        "render_identical": true,
+        "semantic_data_equal": true
+      },
+      "public_points": {
+        "render_identical": true,
+        "semantic_data_equal": true
+      },
+      "rich_points": {
+        "render_identical": true,
+        "semantic_data_equal": true
+      }
+    },
+    "pillow_version": "12.2.0",
+    "png_outputs": 49,
+    "spatial_semantic_probes": true,
+    "unique_decoded_layer_images": 10
+  },
+  "result_exit_code": 0,
+  "schema_version": 1,
+  "task": "FND-05"
+}
